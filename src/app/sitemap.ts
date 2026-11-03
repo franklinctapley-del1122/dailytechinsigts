@@ -1,1 +1,12 @@
-import type {MetadataRoute} from "next"; import {hubs,SITE_URL} from "@/lib/site"; export default function sitemap():MetadataRoute.Sitemap{const now=new Date();return [{url:SITE_URL+"/",lastModified:now,priority:1},...hubs.flatMap(h=>[{url:SITE_URL+"/"+h.slug+"/",lastModified:now,priority:.8},{...{url:SITE_URL+"/"+h.slug+"/",lastModified:now,priority:.8}},...h.subs.map(s=>({url:SITE_URL+"/"+h.slug+"/"+s[1]+"/",lastModified:now,priority:.7}))])];}
+import type { MetadataRoute } from "next";
+import { hubs, SITE_URL } from "@/lib/site";
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+  return [
+    { url: SITE_URL + "/", lastModified: now, changeFrequency: "weekly", priority: 1 },
+    ...hubs.flatMap((hub) => [
+      { url: SITE_URL + "/" + hub.slug + "/", lastModified: now, changeFrequency: "weekly" as const, priority: 0.8 },
+      ...hub.subs.map((sub) => ({ url: SITE_URL + "/" + hub.slug + "/" + sub[1] + "/", lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 }))
+    ])
+  ];
+}
