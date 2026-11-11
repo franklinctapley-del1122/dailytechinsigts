@@ -104,7 +104,7 @@ Microsoft documents the Windows steps in its [official Wi-Fi guide](https://supp
 
 - Confirm that Wi-Fi is on and Airplane Mode is off.
 - If you use a manual proxy, VPN, or security product, check whether it is required by your workplace or school before changing it.
-- Windows 11 users can run the Network and Internet troubleshooter in the Get Help app.
+- Run the Windows network troubleshooter using the route shown in your installed Windows version. Microsoft has changed troubleshooting entry points across Windows releases, so avoid relying on an old menu path.
 - If the problem began after a driver or Windows update, check the computer maker's support instructions before removing a network driver.
 
 **Android**
@@ -119,7 +119,7 @@ Android menu labels differ across manufacturers, so use your phone maker's instr
 - Make sure Airplane Mode is off.
 - If the Wi-Fi setting is greyed out, restart the device.
 - If you use VPN or security software, follow Apple's guidance and consult the provider or your organization's administrator before removing managed software.
-- Apple also identifies Connectivity Assist as a setting to check during troubleshooting. Its behavior and availability can vary by software version and region.
+- Apple's current guidance says to check that Connectivity Assist is off. If the Wi-Fi setting appears greyed out, restart the device.
 
 See Apple's [iPhone and iPad Wi-Fi troubleshooting steps](https://support.apple.com/en-us/111786) for the current instructions.
 
@@ -175,7 +175,7 @@ The word “reset” can describe actions with very different consequences.
 | Reset device network settings | Removes saved network configurations and may reset other network-related settings | Rejoin Wi-Fi and reconfigure affected settings | Only after simpler device checks fail |
 | Factory-reset the router | Erases the router's configuration and restores factory defaults | Set up Wi-Fi and any required ISP settings again | Last resort, preferably with ISP or manufacturer guidance |
 
-Apple warns that Reset Network Settings removes saved Wi-Fi networks and passwords, as well as cellular, VPN, and APN settings. If a school or business manages the device or network, consult its administrator before resetting. A router factory reset is different again: it can erase the Wi-Fi name, password, and provider-specific configuration. Do not press the router's physical reset button unless you are prepared to set it up again.
+Apple warns that Reset Network Settings removes saved Wi-Fi networks and passwords, as well as cellular, VPN, and APN settings. If a school or business manages the device or network, consult its administrator before resetting. On Windows, Network reset removes installed network adapters and their settings; VPN clients or virtual switches may need to be reinstalled or configured again. On iPhone or iPad, Reset Network Settings removes saved Wi-Fi networks and passwords, cellular settings, and VPN/APN settings. A router factory reset is different again: it can erase the Wi-Fi name, password, and provider-specific configuration. Do not press the router's physical reset button unless you are prepared to set it up again.
 
 ## When to contact your ISP, device maker, or network administrator
 
