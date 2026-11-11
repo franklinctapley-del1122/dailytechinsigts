@@ -194,3 +194,65 @@ A third-party AI-tool keyword analysis published in October 2026 reports very co
 - [ ] Owner approval before Phase 2 publishing-system implementation.
 
 **Current decision:** Draft v0.1 only. Continue with research and validation; do not treat this document as publishing authorization.
+
+
+
+## 10. First-pass public SERP and query validation — 2026-11-11
+
+**Research scope:** Initial public-web discovery for the US audience. This is qualitative reconnaissance, not a complete Google/Bing SERP capture and not a keyword-volume study. Search snippets and indexed official support pages help confirm that concrete troubleshooting questions and platform-specific task intents exist; they do not establish monthly search volume, difficulty, ranking potential, or exact SERP overlap. OpenSEO keyword data is not yet connected.
+
+### Evidence observed
+
+| Topic candidate | Public evidence observed | Preliminary intent / architecture implication |
+|---|---|---|
+| iPhone slow / performance | Apple Support has a focused troubleshooting page covering network conditions, unresponsive apps, storage, temperature, Low Power Mode, and battery health. | Strong symptom-led informational intent. One comprehensive iPhone performance page may satisfy several near-synonymous symptoms; validate whether battery drain and overheating SERPs are distinct before splitting. |
+| Android battery life / heat | Android Help has a dedicated battery-life guidance page and explicitly notes heat can increase battery drain. | Battery-care intent exists independently of generic Android setup. Compare battery drain vs overheating SERPs before deciding one combined page or separate symptom pages. |
+| ChatGPT errors / troubleshooting | OpenAI Help Center has a dedicated error-message troubleshooting page, with issue-specific sections for network errors, suspicious activity, slow/frozen behavior, and other failures. | Clear branded troubleshooting intent. Group error variants by shared solution set; avoid multiple thin pages for near-identical error phrasings. |
+| ChatGPT files / audio | OpenAI Help Center maintains a separate upload guide covering supported file types, availability, limits, and troubleshooting. | Distinct task intent from general ChatGPT errors. A file-upload help page is a plausible supporting page, with plan/availability caveats and dated official sourcing. |
+| Wi-Fi connected / no internet | Microsoft Support has a dedicated Wi-Fi troubleshooting resource and a distinct section for connected-to-Wi-Fi/no-internet symptoms, including device-vs-router diagnosis and reset steps. | Potentially broad cross-device intent. Need compare generic query SERPs with Windows-specific SERPs; keep Windows-only instructions in Software and network-level troubleshooting in How-to & Fixes. |
+| Laptop not charging | HP has a dedicated troubleshooting guide that distinguishes user-checkable causes from charger, port, battery, and board-level repair issues. | Clear device troubleshooting intent. Generic laptop charging query may have manufacturer-specific SERPs; likely one general diagnostic guide with brand-specific caveats unless SERP overlap supports separate brand pages. |
+| Phishing / clicked link | FTC consumer guidance covers recognition, reporting, and response after sharing information or opening a suspicious attachment/link. | Strong public-interest/security intent. Separate “recognize phishing” from “what to do after clicking” only if live SERPs and task differences justify it; link to official US reporting channels. |
+| Account MFA / 2-Step Verification | Google Account Help has a dedicated 2-Step Verification setup guide, including passkey interactions. | Platform-specific setup intent belongs in supporting content; general account-security Core should explain concepts and route to platform-specific official instructions. |
+
+### First-pass source register
+
+- Apple Support, “If your iPhone or iPad is running slow”: https://support.apple.com/en-gb/102598
+- Android Help, “Get the most life from your Android device's battery”: https://support.google.com/android/answer/7664692
+- OpenAI Help Center, “Troubleshooting ChatGPT Error Messages”: https://help.openai.com/en/articles/7996703-troubleshooting-chatgpt-error-messages
+- OpenAI Help Center, “Uploading files and audio to ChatGPT”: https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt
+- Microsoft Support, “Fix Wi-Fi connection issues in Windows”: https://support.microsoft.com/en-us/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows
+- HP Tech Takes, “Laptop Not Charging? How to Fix It”: https://www.hp.com/us-en/tech-takes/laptops/troubleshooting/how-to-fix-laptop-that-wont-charge.html
+- FTC Consumer Advice, “How To Recognize and Avoid Phishing Scams”: https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams
+- Google Account Help, “Turn on 2-Step Verification”: https://support.google.com/accounts/answer/185839
+
+### Preliminary SERP clustering decisions (provisional)
+
+1. **Keep symptom-led and platform-led pages distinct only where the answer changes.** “Wi-Fi connected but no internet” should not automatically become separate Windows, Android, iPhone, and router articles. Compare the actual result sets and steps first.
+2. **ChatGPT error troubleshooting and file-upload help are likely separate intents.** Official support material already treats them as distinct task families; validate with live query SERPs before approving final URLs.
+3. **Avoid thin symptom permutations.** “iPhone running slow,” “iPhone lagging,” and “iPhone performance issues” may belong in one page if their SERPs and required solutions overlap. Same rule applies to battery drain / poor battery life and related phrasings.
+4. **Keep security response separate from general how-to troubleshooting.** “Clicked a phishing link” is a security incident-response task, not a generic app issue.
+5. **Treat vendor support pages as evidence of user problems and authoritative fact sources, not proof of search demand or competitors to beat.** Competitor analysis must include actual ranking publisher pages for the target query.
+
+### Priority for the next validation pass
+
+| Priority | Candidate cluster | Why it is next |
+|---|---|---|
+| P1 | Wi-Fi connected but no internet / slow Wi-Fi | Broad multi-device reader problem; must resolve hub routing and likely query overlap early. |
+| P1 | iPhone slow / battery draining / overheating | High practical value; test whether symptoms share SERPs or deserve separate pages. |
+| P1 | Laptop not charging / computer won't start / running slow | Strong actionable troubleshooting tasks; verify generic vs manufacturer/OS-specific intent. |
+| P1 | ChatGPT not working / error messages / file upload failure | Branded task families with official documentation; volatile product details require frequent verification. |
+| P1 | Phishing recognition / clicked suspicious link / account security | Distinct prevention vs incident-response tasks; high trust and source requirements. |
+| P2 | Android battery / app permissions / storage | Validate demand and OEM fragmentation before committing URLs. |
+| P2 | Windows/macOS settings and productivity software | Broad topics need narrower query-led clusters and SERP comparison before URL decisions. |
+| P2 | AI tool comparisons and AI image copyright/privacy | Commercial/legal freshness risk; defer until clear task-specific demand and evidence differentiation are established. |
+
+### What is not yet validated
+
+- No verified monthly US search volumes, keyword difficulty, CPC, or trend series.
+- No complete top-10 Google/Bing result snapshots captured for a fixed US location/device.
+- No quantified SERP overlap matrix between close query variants.
+- No verified People Also Ask extraction or autocomplete dataset.
+- No final Core/Supporting/Transitional assignment for individual article URLs.
+- No keyword-level cannibalization audit against existing Daily Tech Insights articles; there are currently no published article URLs in the post sitemap.
+
+**Next gate:** Connect a keyword research source (OpenSEO or an equivalent trusted dataset), then capture fixed-location US SERPs for the P1 clusters and record competing URLs. Do not approve article URLs, write articles, publish, or request indexing until this evidence and the final SCN are reviewed.
