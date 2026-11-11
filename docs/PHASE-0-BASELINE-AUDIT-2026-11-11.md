@@ -133,3 +133,46 @@ A direct fetch against the READY production deployment built from commit d8bb9bf
 | Search Console/Bing baseline | Not available | Requires authorized account access |
 
 **Phase 0 remains in progress.** The robots/sitemap and hub-route response checks are now complete; mobile QA, build/type-check evidence, informational-page crawl/metadata review, and Search Console/Bing baseline remain outstanding.
+
+
+## 11. Follow-up build, informational-page, and responsive-source review — 2026-11-11
+
+### Production build and TypeScript
+The Vercel production build for commit `788170cfc15eccd2e99cf40a02e995de6d1c05ca` completed successfully:
+- Next.js 15.5.28 optimized production build compiled successfully.
+- Vercel build output reports “Linting and checking validity of types” and proceeds through page-data collection and static generation.
+- All 32 static pages were generated.
+- Deployment completed and reached READY.
+- One non-blocking npm warning was recorded: unknown env config `cache-dir`. It did not stop dependency installation or the build.
+- This is deployment-build evidence; a separate local CLI run was not performed.
+
+### Informational pages and 404 behavior
+The four informational routes were checked on the deployment:
+- `/about/`: HTTP 200, page title and non-www canonical present; copy still says author biographies and detailed editorial information will be published before articles.
+- `/contact/`: HTTP 200, page title and canonical present; no monitored contact email is published yet.
+- `/editorial-policy/`: HTTP 200, page title and canonical present; the policy describes standards but says testing methods, author biographies, correction procedures, and update records will be documented at launch.
+- `/privacy-policy/`: HTTP 200, page title and canonical present; page explicitly remains a pre-launch placeholder.
+- A deliberately nonexistent test path returned HTTP 404 and a `noindex` robots directive. Its generated metadata still showed the site-wide homepage title/canonical in the fetched response; review whether custom not-found metadata should be set so a 404 response does not advertise the homepage canonical.
+
+### Responsive source review (not visual device QA)
+Source inspection confirms:
+- At widths <=800px, header navigation moves below the brand and becomes a horizontally scrollable, no-wrap row; the sub-hub grid changes from three columns to two, and footer columns reduce to two.
+- At widths <=560px, main content grids become one column, outer gutters reduce to 16px per side, and section/hero spacing and heading sizes reduce.
+- No hamburger menu is implemented; the mobile navigation relies on horizontal scrolling. This may be acceptable, but should be tested on touch devices for discoverability and keyboard accessibility.
+- No automated browser screenshot or physical-device test was available in this pass. Therefore responsive behavior is source-reviewed, not visually certified.
+
+## 12. Updated acceptance status
+
+| Area | Status | Notes |
+|---|---|---|
+| Production build | Verified successful | Next.js compile and static generation completed |
+| TypeScript check in production build | Passed as part of Vercel build | Separate local run not performed |
+| Informational routes | Verified 200 | Canonical/title present; content readiness gaps remain |
+| 404 behavior | Verified 404 + noindex | Homepage title/canonical in response should be reviewed |
+| Responsive CSS | Source-reviewed | <=800px and <=560px breakpoints; no real-device visual QA |
+| Mobile navigation | Needs UX validation | Horizontally scrollable links; no hamburger |
+| Privacy/legal readiness | Incomplete | Privacy placeholder remains |
+| Contact readiness | Incomplete | No monitored contact address |
+| Editorial accountability | Incomplete | Bios/testing/corrections/update records still pending |
+
+**Phase 0 remains in progress.** The production build, sitemap endpoints, all 20 hub/sub-hub routes, four informational routes, and a not-found test path have now been checked. Remaining blockers are visual mobile QA, reviewing the 404 canonical metadata, and obtaining authorized Search Console/Bing baseline evidence.
