@@ -104,7 +104,7 @@ Microsoft documents the Windows steps in its [official Wi-Fi guide](https://supp
 
 - Confirm that Wi-Fi is on and Airplane Mode is off.
 - If you use a manual proxy, VPN, or security product, check whether it is required by your workplace or school before changing it.
-- Run the Windows network troubleshooter using the route shown in your installed Windows version. Microsoft has changed troubleshooting entry points across Windows releases, so avoid relying on an old menu path.
+- On Windows 11, open the Get Help app, search for `connect to network and internet`, select **Run network diagnostics**, and follow the prompts. Microsoft documents this current entry point in its [Windows troubleshooters guide](https://support.microsoft.com/en-us/support/get-help/windows-troubleshooters).
 - If the problem began after a driver or Windows update, check the computer maker's support instructions before removing a network driver.
 
 **Android**
@@ -119,7 +119,7 @@ Android menu labels differ across manufacturers, so use your phone maker's instr
 - Make sure Airplane Mode is off.
 - If the Wi-Fi setting is greyed out, restart the device.
 - If you use VPN or security software, follow Apple's guidance and consult the provider or your organization's administrator before removing managed software.
-- Apple's current guidance says to check that Connectivity Assist is off. If the Wi-Fi setting appears greyed out, restart the device.
+- Apple's guidance says to make sure **Wi-Fi Assist** is off under Settings > Cellular. If the Wi-Fi setting appears greyed out, restart the device.
 
 See Apple's [iPhone and iPad Wi-Fi troubleshooting steps](https://support.apple.com/en-us/111786) for the current instructions.
 
@@ -152,6 +152,18 @@ A reply indicates that the computer can reach the gateway. If websites still do 
 
 Microsoft explains this test and its limitations in its [official Windows troubleshooting instructions](https://support.microsoft.com/en-us/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows).
 
+### Run Windows network commands only when simpler checks fail
+
+If Windows still cannot connect and you are comfortable using an administrator Command Prompt, Microsoft documents these commands for resetting network components and renewing the connection. Run them in this order, pressing Enter after each command:
+
+1. `netsh winsock reset`
+2. `netsh int ip reset`
+3. `ipconfig /release`
+4. `ipconfig /renew`
+5. `ipconfig /flushdns`
+
+Restart the PC after the commands, then test again. These commands change Windows networking configuration; do not run them on a managed work or school computer without IT approval. See Microsoft's [Windows Wi-Fi troubleshooting guide](https://support.microsoft.com/en-us/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows).
+
 ### Check DNS only after basic connectivity checks
 
 DNS helps a device find the network address associated with a website name. A DNS problem can affect browsing even when the device is connected to Wi-Fi. However, changing DNS will not repair an ISP outage, a disconnected cable, or a router that has lost its upstream connection.
@@ -175,7 +187,7 @@ The word “reset” can describe actions with very different consequences.
 | Reset device network settings | Removes saved network configurations and may reset other network-related settings | Rejoin Wi-Fi and reconfigure affected settings | Only after simpler device checks fail |
 | Factory-reset the router | Erases the router's configuration and restores factory defaults | Set up Wi-Fi and any required ISP settings again | Last resort, preferably with ISP or manufacturer guidance |
 
-Apple warns that Reset Network Settings removes saved Wi-Fi networks and passwords, as well as cellular, VPN, and APN settings. If a school or business manages the device or network, consult its administrator before resetting. On Windows, Network reset removes installed network adapters and their settings; VPN clients or virtual switches may need to be reinstalled or configured again. On iPhone or iPad, Reset Network Settings removes saved Wi-Fi networks and passwords, cellular settings, and VPN/APN settings. A router factory reset is different again: it can erase the Wi-Fi name, password, and provider-specific configuration. Do not press the router's physical reset button unless you are prepared to set it up again.
+If a school or business manages the device or network, consult its administrator before resetting. On Windows, Network reset removes installed network adapters and their settings; VPN clients or virtual switches may need to be reinstalled or configured again. On iPhone or iPad, Reset Network Settings removes saved Wi-Fi networks and passwords, cellular settings, and VPN/APN settings. A router factory reset is different again: it can erase the Wi-Fi name, password, and provider-specific configuration. Do not press the router's physical reset button unless you are prepared to set it up again.
 
 ## When to contact your ISP, device maker, or network administrator
 
@@ -215,7 +227,8 @@ Start with a power restart, not a factory reset. A factory reset erases the rout
 
 ## Sources and editorial notes
 
-- [Microsoft Support: Fix Wi-Fi connection issues in Windows](https://support.microsoft.com/en-us/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows) — Windows troubleshooting, gateway ping, adapter driver precautions, and network reset effects.
+- [Microsoft Support: Fix Wi-Fi connection issues in Windows](https://support.microsoft.com/en-us/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows) — Windows troubleshooting, network commands, gateway ping, adapter driver precautions, and network reset effects.
+- [Microsoft Support: Windows troubleshooters](https://support.microsoft.com/en-us/support/get-help/windows-troubleshooters) — current Get Help route for network diagnostics.
 - [Google Android Help: Fix internet connection problems on Android devices](https://support.google.com/android/answer/2651367) — Android Wi-Fi/mobile-data comparison, signal checks, Airplane Mode, router restart, and provider escalation.
 - [Apple Support: If you can't connect to Wi-Fi on your iPhone or iPad](https://support.apple.com/en-us/111786) — iPhone/iPad Wi-Fi settings, VPN/security software, router checks, and network reset consequences.
 - [TP-Link: Wi-Fi Connected, But Still No Internet? Complete Fix Guide](https://www.tp-link.com/us/blog/2608/wi-fi-connected-but-still-no-internet-complete-fix-guide/) — competitor structure review.
