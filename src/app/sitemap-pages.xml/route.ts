@@ -9,6 +9,7 @@ export function GET() {
     "contact",
     "editorial-policy",
     "privacy-policy",
+    "authors/daily-tech-insights-editorial-team",
     ...hubs.flatMap((hub) => [
       hub.slug,
       ...hub.subs.map((sub) => `${hub.slug}/${sub[1]}`),
