@@ -99,3 +99,37 @@ Vercel deployment history shows a production deployment in state READY for the m
 | Search Console/Bing baseline | Not available in this audit | Requires account access |
 
 **Phase 0 remains in progress.** This baseline report records what is confirmed and separates outstanding verification from actual defects.
+
+
+## 9. Follow-up live verification — 2026-11-11
+
+A direct fetch against the READY production deployment built from commit d8bb9bf10bb1344beb61d99e253467a196ed4cfb confirmed:
+
+- `/robots.txt`: HTTP 200, `text/plain`; allows all user agents and references the canonical sitemap URL.
+- `/sitemap.xml`: HTTP 200, `application/xml; charset=utf-8`; valid-looking sitemap index with two child sitemap locations.
+- `/sitemap-pages.xml`: HTTP 200, `application/xml; charset=utf-8`; contains 25 URL entries (homepage, four informational pages, five hubs, 15 sub-hubs).
+- `/sitemap-posts.xml`: HTTP 200, `application/xml; charset=utf-8`; contains an empty urlset, consistent with the absence of published articles.
+- All five hub routes and all 15 sub-hub routes returned HTTP 200 in deployment fetch checks. Each checked route emitted a title and canonical URL on the non-www HTTPS host.
+- The 15 sub-hub routes render an editorial placeholder (“Guides coming to this hub”) rather than article listings. This is not a server error, but it confirms these pages currently have limited user value until researched guides are published.
+- The homepage HTML includes a canonical URL of `https://dailytechinsights.com/` and `robots=index, follow`.
+
+**Interpretation:** The sitemap and robots endpoints are reachable and correctly served as text/XML from the deployment. The page sitemap is structurally populated with 25 entries; this does not prove Google has crawled or indexed those URLs. The post sitemap is empty because no article library is implemented yet.
+
+## 10. Updated acceptance status
+
+| Area | Status | Notes |
+|---|---|---|
+| Production deployment | READY | Audit commit d8bb9bf10bb1344beb61d99e253467a196ed4cfb |
+| robots.txt live response | Verified 200 | text/plain; canonical sitemap reference |
+| Sitemap index live response | Verified 200 | application/xml; two child sitemap locations |
+| Page sitemap live response | Verified 200 | 25 URL entries |
+| Posts sitemap live response | Verified 200 | Empty urlset; no published articles |
+| Five hub routes | Verified 200 | Titles and canonical tags present |
+| 15 sub-hub routes | Verified 200 | Titles/canonicals present; all show editorial placeholders |
+| Canonical host strategy | Verified | Non-www HTTPS canonicals in sampled/all 20 hub routes |
+| Mobile QA | Not verified | CSS breakpoints exist; real viewport testing remains |
+| Build/type checks | Deployment READY only | Separate reproducible CI/local logs not captured |
+| Privacy/legal readiness | Incomplete | Do not enable data collection yet |
+| Search Console/Bing baseline | Not available | Requires authorized account access |
+
+**Phase 0 remains in progress.** The robots/sitemap and hub-route response checks are now complete; mobile QA, build/type-check evidence, informational-page crawl/metadata review, and Search Console/Bing baseline remain outstanding.
