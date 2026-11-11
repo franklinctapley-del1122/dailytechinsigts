@@ -183,3 +183,73 @@ The supplied TP-Link page is a useful commercial-manufacturer reference, but do 
 - No arbitrary word-count target.
 - No unsupported claims that a DNS change, channel change, or network reset is a universal fix.
 - Keep the existing sub-hub URL; do not index or submit pages until all content is complete and the user approves.
+
+
+## 11. Competitor page audit: TP-Link article supplied by user
+
+Source reviewed: TP-Link Editorial Group, “Wi-Fi Connected, But Still No Internet? Complete Fix Guide,” dated 2026-07-29. The user supplied the extracted full page text. This audit describes that source only; it is not yet a top-five competitor comparison.
+
+### Observed competitor heading structure
+
+- H1: Wi-Fi Connected, But Still No Internet? Complete Fix Guide
+- H2: What Does “Wi-Fi Connected Without Internet” Mean?
+- H2: Common Causes
+- H2: Quick Fixes (Start Here)
+  - H3: Check for an ISP Outage
+  - H3: Restart Your Router and Modem
+  - H3: Check Your Cables
+- H2: Troubleshooting Steps (If Quick Fixes Don't Work)
+  - H3: Is It One Device or All Devices?
+  - H3: Restart Your Device
+  - H3: Forget and Rejoin the Wi-Fi Network
+  - H3: Check DNS Settings
+  - H3: Renew Your IP Address
+- H2: Advanced Fixes (Last Resort)
+  - H3: Update Network Drivers (Windows)
+  - H3: Reset Network Settings
+  - H3: Factory Reset Your Router
+- H2: Simple Wi-Fi Troubleshooting Habits That Prevent Most Wi-Fi Issues
+- H2: Is It Your Router?
+- H2: Could It Be Time for a New Router?
+- H2: Get Connected and Stay Connected
+- H2: Frequently Asked Questions
+  - FAQ questions cover why Wi-Fi is connected without internet, what the status means, how to fix it, and phone/laptop symptoms.
+
+### What this competitor covers well
+
+1. Explains the distinction between the local Wi-Fi link and internet access.
+2. Lists plausible cause categories: ISP outage, router/modem restart, cables, device DNS/IP/driver settings, and router firmware or hardware.
+3. Gives an ordered troubleshooting progression from basic checks to advanced changes.
+4. Includes cross-device paths for Windows, Mac, iPhone, and Android for forgetting and rejoining a network.
+5. Explains the one-device vs all-devices split.
+6. Includes FAQs for broad, phone, and laptop variants.
+
+### Gaps and opportunities to investigate (not yet proven market-wide)
+
+1. The one-device vs all-devices diagnostic appears late, after the quick-fix block. Our guide can put this decision immediately after the answer-first definition so readers choose the correct path before restarting equipment.
+2. The article gives several device instructions, but not a full diagnostic decision tree that tells readers what each test result means and what to do next.
+3. It covers Windows and Mac DNS/IP steps but does not provide an equivalent detailed Android/iPhone troubleshooting path in the same depth.
+4. It treats router factory reset as a last-resort step and notes that settings are erased; our article should make the difference between a power restart, forgetting a saved network, device network reset, and router factory reset especially explicit.
+5. The router replacement and TP-Link product-promotion sections introduce a commercial angle. Our publisher guide should remain vendor-neutral and should not recommend hardware replacement based only on age or generic claims.
+6. The article's routine monthly router restart and 4–5-year upgrade suggestions are claims from this competitor, not universal rules. Do not repeat them without independent evidence and manufacturer/ISP support.
+7. Its quick-fix introduction claims the steps take under five minutes and resolve most cases, and its body calls restarting the most common fix. We should not repeat such quantified or superlative claims without independent supporting data.
+
+### Implications for our core child guide
+
+Proposed order:
+1. Answer directly: what “connected, no internet” means.
+2. Immediately distinguish one affected device from all devices.
+3. Give a simple decision table and explain what each test result indicates.
+4. Check ISP status and router/modem status, then cables and power, without assuming every setup has separate modem and router hardware.
+5. If one device is affected, branch to OS-specific checks and link to dedicated Windows/Android guides only if those pages pass QDP.
+6. Explain DNS and IP renewal only after basic checks, with current OS-specific steps and rollback guidance.
+7. Reserve driver updates and network resets for later; clearly state what settings may be lost.
+8. Treat router factory reset as a provider/manufacturer-guided last resort.
+9. Keep router-buying recommendations out of the troubleshooting article unless a separate, evidence-based buying intent is demonstrated.
+
+### Evidence and scope limitations
+
+- This is one complete competitor article, supplied as extracted text. It does not establish what all top-five competitors cover.
+- The page's own claims are not independent proof that monthly restarts prevent issues, that routers should be replaced after a fixed age, or that a restart solves most cases.
+- Its author is TP-Link Editorial Group and the page promotes TP-Link products. Consider the commercial context when evaluating product recommendations.
+- Complete competitor-gap claims require equivalent heading/content audits for at least four more organic results, ideally including Microsoft Support, Avast, and other top-ranked pages from the user's SERP capture.
