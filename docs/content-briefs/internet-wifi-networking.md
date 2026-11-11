@@ -568,3 +568,12 @@ The three platform support sources have different scopes and levels of technical
 ### Evidence boundary
 
 Apple is an official platform support source, not a publisher competitor. The source count is now two commercial editorial pages (TP-Link and Avast) and three official platform support references (Microsoft, Google, Apple). The top-five publisher competitor-gap audit remains incomplete.
+
+
+## 17. Core child brief created
+
+A dedicated semantic content brief for the proposed child guide `/how-to/wifi-connected-no-internet/` has been created at:
+
+- `docs/content-briefs/wifi-connected-no-internet.md`
+
+It contains the page identity, query network, qualitative PPR, proposed H1/H2/H3 vector, contextual formats, internal-link plan, competitor/source comparison, evidence requirements, claim controls, and publication QA gates. The URL remains proposed and must not be published or indexed until approved.
