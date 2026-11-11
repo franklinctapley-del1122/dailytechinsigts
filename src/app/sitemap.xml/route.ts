@@ -3,9 +3,8 @@ import { SITE_URL } from "@/lib/site";
 export const dynamic = "force-static";
 
 export function GET() {
-  const lastmod = new Date().toISOString();
   const sitemaps = ["sitemap-pages.xml", "sitemap-posts.xml"]
-    .map((name) => `  <sitemap><loc>${SITE_URL}/${name}</loc><lastmod>${lastmod}</lastmod></sitemap>`)
+    .map((name) => `  <sitemap><loc>${SITE_URL}/${name}</loc></sitemap>`)
     .join("\n");
 
   return new Response(
