@@ -405,3 +405,40 @@ Windows 11 slow, Gmail not receiving emails, and app not opening metric calls fa
 - 22 candidate terms across the two research batches were saved in OpenSEO for future reference. No rank tracking, scheduled tracking, or paid recurring monitoring was configured.
 
 **Next gate:** Retry failed seed metrics with simpler variants, then inspect more query variants for Gmail, Windows, and Android app fixes. Confirm whether passkeys explainer and password-manager selection have different SERPs. Once the remaining hub families have evidence, assemble final topic inventory and SCN graph. No articles, sitemap content, or indexing actions until approval.
+
+## 13. Passkeys SERP overlap and evidence gate — 2026-11-11
+
+**Additional comparison:** US Google desktop SERPs were sampled for “passkeys vs passwords,” “what are passkeys,” and “best password manager.” This resolves the initial question of whether these terms should share one URL.
+
+### SERP overlap observations
+
+- “Passkeys vs passwords” and “what are passkeys” share some authoritative domains (Microsoft Learn, Google Safety) and the same underlying entity, but the query framing differs: one is comparative, the other is definitional/how-it-works. The comparison SERP also includes more explicitly comparison-titled pages (Dashlane, GlobalSign, security publishers) and discussion results from users evaluating passkeys against password managers.
+- “Best password manager” is materially different: the sampled SERP is dominated by product roundups, review pages, comparison tables and commercial evaluation. It is not a synonym for passkeys vs passwords.
+- Result sets are not identical. Shared domains alone do not prove the same page should target both intents; compare exact ranking URLs and section coverage during final cluster design.
+
+### Provisional decision
+
+1. **Passkeys vs passwords** — distinct comparison page candidate under Cybersecurity > Account Security. Answer security differences, phishing resistance, convenience, device binding/sync, recovery and practical transition advice.
+2. **What are passkeys / how do passkeys work** — consider as the primary definitional page or a substantial opening section within the comparison page only after exact URL-level overlap is checked. Avoid creating two pages that merely repeat the same definition and benefits.
+3. **Best password manager** — separate commercial page candidate. Do not fold it into the passkeys comparison. Any recommendation requires transparent evaluation criteria, current product feature/pricing evidence, limitations and a genuine hands-on or documented research basis.
+
+### Official evidence anchors for future brief
+
+- Microsoft Support explains passkey key-pair behavior, phishing resistance, multi-device use and Windows account/device caveats: https://support.microsoft.com/en-us/accounts-billing/security/passkeys-frequently-asked-questions-faq
+- Google Account Help explains passkey setup, device ownership cautions, sign-in, device loss and recovery alternatives: https://support.google.com/accounts/answer/13548313
+- Microsoft Learn describes the public/private key model and Windows passkey behavior: https://learn.microsoft.com/en-us/windows/security/identity-protection/passkeys
+- Google for Developers provides platform-neutral passkey fundamentals: https://developers.google.com/identity/passkeys/
+
+### Important editorial caveats
+
+- Do not claim passkeys eliminate every account-takeover risk or remove the need for recovery planning.
+- Explain the difference between synced passkeys and device-bound passkeys; loss of a device can have different consequences depending on storage and recovery setup.
+- Avoid implying all sites, apps, browsers, and account types support identical passkey flows.
+- Keep consumer advice distinct from enterprise authentication deployment.
+- Product comparison content remains blocked until a documented review methodology and current evidence are ready.
+
+### Research-provider credit constraint
+
+The latest five-seed keyword-metrics retry returned `INSUFFICIENT_CREDITS` for every seed. No new volume/KD values were obtained for Windows 11 slow, Gmail not receiving mail, Android apps not opening, what are passkeys, or passkey vs password in this retry. Google SERP reads for passkeys comparison/definition and best password manager did succeed. Do not infer metrics from SERP positions or prior related terms. Further paid keyword research should wait until credits are replenished or an alternative dataset is authorized.
+
+**Current decision:** Passkeys vs passwords and best password manager are separate intent candidates; definition/how-it-works may be consolidated with the passkeys explainer after URL-level overlap review. This remains draft research, not final URL approval.
