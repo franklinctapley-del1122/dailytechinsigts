@@ -444,3 +444,58 @@ The user supplied the extracted Microsoft Support page “Fix Wi-Fi connection i
 Use Microsoft as the primary authority for Windows-specific instructions. The core consumer guide should explain the diagnostic logic in plain language and link to Microsoft for advanced Windows steps where that is more responsible than paraphrasing a long command sequence. If we reproduce any command, include its exact purpose, prerequisites, expected result, and potential side effects.
 
 No additional publisher competitor count is added by this supplied Microsoft page; the source audit count remains two commercial editorial pages plus one official platform support source.
+
+
+## 15. Official source audit: Google Android Help
+
+Source: Google Android Help, “Fix internet connection problems on Android devices,” supplied by the user and cross-checked against the current official page on 2026-11-11. Official URL: https://support.google.com/android/answer/2651367
+
+### Source structure and coverage
+
+- Signs of a bad connection:
+  - Downloads do not start, time out, or remain at 0%.
+  - Google Play remains on “Loading”.
+  - Browser pages do not load.
+- General Android troubleshooting:
+  1. Restart the device.
+  2. Switch between Wi-Fi and mobile data and compare.
+  3. Continue to mobile-data or Wi-Fi-specific troubleshooting.
+- Mobile data:
+  - Check mobile data is enabled and toggle it off/on.
+  - Check for a cellular data indicator (2G/3G/4G/H in the supplied version).
+  - Turn Wi-Fi off to reveal/check the mobile data indicator.
+  - Move to another area or outside if there is no signal indicator; contact the mobile provider if recurring.
+  - Toggle Airplane mode on, wait 10 seconds, and turn it off.
+- Wi-Fi:
+  - Check Wi-Fi is enabled and connected.
+  - If no Wi-Fi indicator/bars, move closer to the router and check signal.
+  - Restart the home router according to its manual: unplug, wait 30 seconds, reconnect, wait for lights; contact ISP or network host if unresolved.
+- Settings menu labels vary by device; the page notes that some devices use “Connections” rather than “Network & internet”.
+
+### What the source supports
+
+1. Google's first general isolation method is to compare Wi-Fi and mobile data on the same Android device. If mobile data works but Wi-Fi does not, this points toward the Wi-Fi path; it does not by itself prove whether the router, ISP, or phone Wi-Fi configuration is responsible.
+2. Google explicitly separates mobile-data troubleshooting from Wi-Fi troubleshooting. Do not mix cellular coverage/APN/SIM issues into a home Wi-Fi article unless the symptom requires it.
+3. The page's Wi-Fi guidance is intentionally basic: check Wi-Fi state, signal/range, restart router, then contact ISP or network host.
+4. The page does not provide detailed Android procedures for forgetting a saved Wi-Fi network, changing DNS, resetting network settings, or inspecting IP configuration. Do not attribute those steps to this Google page.
+5. The source does not provide manufacturer-specific Samsung, Pixel, Xiaomi, or other Android UI instructions. Menu labels vary, so any device-specific instructions need separate official documentation.
+6. Google does not prescribe factory-resetting the router as a normal troubleshooting step in this article; it says to follow the router manual for restart instructions.
+
+### Implications for Daily Tech Insights
+
+- The Android-specific child guide, if QDP supports a separate URL, should begin by distinguishing Wi-Fi from mobile data using Google's comparison step.
+- Use generic menu paths with an explicit note that labels vary by manufacturer and Android version.
+- Keep mobile coverage, mobile data, and Airplane mode in a short diagnostic branch, not as the main fix for “Wi-Fi connected but no internet”.
+- For Wi-Fi, check the signal/range before router restart; if multiple devices are affected, direct the reader toward router/ISP checks.
+- Do not imply Google recommends DNS changes, network reset, or forgetting/rejoining the network based on this page. If included, verify each step against a separate current official Android/manufacturer source.
+- Avoid assuming that “router reset” means factory reset. Google's steps describe a power restart; preserve this distinction clearly.
+
+### Comparison update
+
+- Google is the primary source for basic Android connectivity troubleshooting, while Microsoft is the primary source for Windows diagnostics.
+- Google’s Android guide is much shorter and more general than Microsoft’s Windows guide; it does not support importing Windows commands or network-reset workflows into Android.
+- Avast and TP-Link cover a wider range of advanced cross-platform fixes, but their Android instructions should not override Google's more limited official guidance without additional manufacturer-specific evidence.
+
+### Evidence boundary
+
+This is an official platform support source, not an independent publisher competitor. The competitive editorial audit still contains two commercial editorial pages (TP-Link and Avast), plus two official platform support references (Microsoft and Google). Do not describe this as four publisher competitors or claim a top-five competitor gap yet.
