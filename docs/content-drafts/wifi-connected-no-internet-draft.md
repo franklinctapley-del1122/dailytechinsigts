@@ -117,9 +117,8 @@ Android menu labels differ across manufacturers, so use your phone maker's instr
 
 - Open Settings and tap Wi-Fi. Confirm Wi-Fi is on and that a blue checkmark appears beside the network.
 - Make sure Airplane Mode is off.
-- If the Wi-Fi setting is greyed out, restart the device.
 - If you use VPN or security software, follow Apple's guidance and consult the provider or your organization's administrator before removing managed software.
-- Apple's guidance says to make sure **Wi-Fi Assist** is off under Settings > Cellular. If the Wi-Fi setting appears greyed out, restart the device.
+- Apple's guidance says to make sure **Wi-Fi Assist** is off under Settings > Cellular.
 
 See Apple's [iPhone and iPad Wi-Fi troubleshooting steps](https://support.apple.com/en-us/111786) for the current instructions.
 
