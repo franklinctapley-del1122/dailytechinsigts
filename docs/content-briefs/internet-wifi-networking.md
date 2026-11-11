@@ -499,3 +499,72 @@ Source: Google Android Help, “Fix internet connection problems on Android devi
 ### Evidence boundary
 
 This is an official platform support source, not an independent publisher competitor. The competitive editorial audit still contains two commercial editorial pages (TP-Link and Avast), plus two official platform support references (Microsoft and Google). Do not describe this as four publisher competitors or claim a top-five competitor gap yet.
+
+
+## 16. Official source audit: Apple Support for iPhone and iPad Wi-Fi
+
+Source: Apple Support, “If you can't connect to Wi-Fi on your iPhone or iPad,” published 2026-10-05 in the user-supplied text. Current official page checked 2026-11-11: https://support.apple.com/en-us/111786
+
+### Source structure and coverage
+
+- Check your Wi-Fi settings:
+  - Turn Wi-Fi on and select the network.
+  - Confirm connection using the blue checkmark.
+  - Confirm Airplane Mode is off.
+  - Check that Connectivity Assist is off (per the troubleshooting sequence on this page).
+  - Restart the device if the Wi-Fi setting is greyed out.
+  - If “No Internet Connection” remains, check router and network settings.
+- Uninstall VPN and security software:
+  - Uninstall the software, restart, and test.
+  - If this resolves the problem but the software is required, contact its provider/administrator.
+- Check whether the issue occurs only on a specific network:
+  - A network may be hidden or may not meet Apple's recommendations.
+  - Contact the ISP if the user does not manage the network or cannot safely change its configuration.
+- Verify the Wi-Fi router:
+  - Test other devices on the same network.
+  - Update router firmware and check Apple-device compatibility.
+  - Confirm router power and range.
+  - Try another frequency band where available (for example, 5 GHz rather than 2.4 GHz).
+  - Restart router and cable modem.
+- Reset network settings only if other solutions fail:
+  - Settings > General > Transfer or Reset [device] > Reset > Reset Network Settings.
+  - This removes saved Wi-Fi networks/passwords and resets cellular, VPN, and APN settings.
+  - Consult IT before resetting a school/work-managed network.
+- Escalation:
+  - Test other devices and another Wi-Fi location.
+  - Contact ISP if multiple devices cannot get online.
+  - Contact Apple if the device cannot connect to any Wi-Fi network.
+
+### What the source supports
+
+1. Apple recommends confirming the iPhone/iPad Wi-Fi state and blue checkmark, then checking Airplane Mode and Connectivity Assist.
+2. The page recommends removing VPN/security software as a diagnostic test, then contacting the provider if the software is needed. This is a significant step; our article should not tell users to remove managed work/school software casually.
+3. Apple uses other devices on the same Wi-Fi to distinguish a device-specific issue from a broader network issue, and another Wi-Fi location to distinguish a device problem from a single-network problem.
+4. Apple explicitly places network settings reset after other solutions fail and lists the settings it removes. The impact is broader than simply forgetting one saved Wi-Fi network.
+5. Apple recommends checking router compatibility, firmware, range, and frequency band, but users who do not manage the network should contact the ISP/network administrator rather than change unfamiliar settings.
+6. The source does not prescribe changing DNS, renewing IP addresses, or running command-line diagnostics on iPhone/iPad.
+
+### Important editorial nuance: Connectivity Assist
+
+Apple's support page says to make sure Connectivity Assist is off during its troubleshooting sequence. Apple's current user guide explains that Connectivity Assist can use cellular data alongside Wi-Fi when Wi-Fi is weak, busy, or not connected to the internet. It can therefore affect whether a user notices the Wi-Fi failure, and may consume cellular data. Explain the feature accurately; do not present it as a universal cause of Wi-Fi failure or tell every reader to disable it permanently.
+
+### Implications for Daily Tech Insights
+
+- If a dedicated iPhone/iPad child page is justified by SERP intent, use Apple's exact current Settings labels and distinguish Connectivity Assist from the Wi-Fi radio itself.
+- Explain that uninstalling a VPN/security app is a diagnostic measure only when appropriate; check whether the device is managed and advise contacting the administrator/provider first.
+- Explain the difference between forgetting one Wi-Fi network (a narrower action) and Reset Network Settings (which removes all saved Wi-Fi networks/passwords and resets cellular, VPN, and APN settings).
+- Keep network reset near the end and warn readers about its consequences before they act.
+- Use Apple Support as the primary source for iPhone/iPad-specific settings; do not transfer Windows commands or Android menu paths to Apple devices.
+
+### Cross-platform source comparison
+
+- Microsoft: Windows-specific diagnostic commands, gateway ping, adapter drivers, power management, and network reset.
+- Google: basic Android Wi-Fi/mobile-data isolation, signal, Airplane Mode, and router restart.
+- Apple: iPhone/iPad settings, Connectivity Assist, VPN/security software, router compatibility/band, and network-settings reset consequences.
+- TP-Link and Avast: broader cross-platform editorial guides with commercial product context.
+
+The three platform support sources have different scopes and levels of technical depth. Do not flatten them into one universal set of device instructions.
+
+### Evidence boundary
+
+Apple is an official platform support source, not a publisher competitor. The source count is now two commercial editorial pages (TP-Link and Avast) and three official platform support references (Microsoft, Google, Apple). The top-five publisher competitor-gap audit remains incomplete.
