@@ -10,7 +10,7 @@ market: "United States"
 
 If your phone, laptop, or tablet says it is connected to Wi-Fi but websites and apps will not load, your device may be connected to the router without having a working path to the internet. The fastest way to narrow down the cause is to connect a second device to the same Wi-Fi network. If that device also cannot get online, investigate the router, modem, or internet service. If other devices work, focus on the affected device.
 
-Follow the checks below in order. Stop when your connection works again. Avoid factory-resetting your router or resetting all network settings until simpler checks have failed.
+Follow the checks below in order. Stop when your connection works again. Avoid factory-resetting your router or resetting all network settings until simpler checks have failed. For a broader overview of home connection problems, see our [Internet, Wi-Fi & Networking guide](/how-to/internet-wifi/).
 
 ## First, find out whether one device or every device is affected
 
@@ -198,7 +198,7 @@ If a school or business manages the device or network, consult its administrator
 | A work or school device uses managed VPN, proxy, or network settings | Your IT or network administrator |
 | Router lights or connection status indicate a fault you cannot identify from the manual | Your ISP or router manufacturer |
 
-When you contact support, share what you tested and the results. That helps avoid repeating steps and gives the support team a clearer starting point.
+When you contact support, share what you tested and the results. That helps avoid repeating steps and gives the support team a clearer starting point. If the problem is broader than internet access, our [computer and device troubleshooting topics](/how-to/device-fixes/) may help with device-side faults. For problems limited to a particular app or sign-in, see [apps, accounts, and everyday tech fixes](/how-to/apps-accounts/).
 
 ## Frequently asked questions
 
@@ -234,3 +234,5 @@ Start with a power restart, not a factory reset. A factory reset erases the rout
 - [Avast: How to Fix The “Connected Without Internet” Wi-Fi Issue](https://www.avast.com/c-how-to-resolve-connected-but-no-internet-access-in-your-wifi) — competitor structure review.
 
 Editorial status: Draft for fact-check and human review. No hands-on testing is claimed. Verify device menu paths against current versions before publication. This draft is not approved for publication, production deployment, sitemap inclusion, or indexing.
+
+Internal-link QA: The parent Internet, Wi-Fi & Networking sub-hub and two existing adjacent troubleshooting sub-hubs are linked contextually. Do not add links to unpublished sibling articles until their routes exist.
