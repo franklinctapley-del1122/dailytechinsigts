@@ -10,7 +10,7 @@ export function findHub(slug:string){return hubs.find(h=>h.slug===slug)}
 export function findSub(category:string,sub:string){const h=findHub(category);const s=h?.subs.find(x=>x[1]===sub);return h&&s?{hub:h,sub:s}:undefined}
 
 
-export type EditorialSection={heading:string;body:string;points?:string[]};
+export type EditorialSection={heading:string;body:string;points?:string[];subsections?:{heading:string;body:string}[];links?:{href:string;label:string;description:string}[]};
 export const hubSections:Record<string,EditorialSection[]> = {
  phones:[
  {heading:"Choose the right kind of phone help",body:"Smartphone questions often begin with a simple symptom: a battery that drops too quickly, storage that keeps filling up, an update that changes a setting, or a connection that stops working. The best fix depends on the phone model, operating-system version, recent changes, and the exact behavior you see. Start with the guide that matches the device and problem rather than applying a reset or cleanup step at random."},
