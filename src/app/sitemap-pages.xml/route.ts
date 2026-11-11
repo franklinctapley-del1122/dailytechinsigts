@@ -19,7 +19,7 @@ export function GET() {
   const urls = paths
     .map((path) => {
       const loc = path ? `${SITE_URL}/${path}/` : `${SITE_URL}/`;
-      return `  <url><loc>${loc}</loc><changefreq>${path.includes("/") ? "weekly" : "monthly"}</changefreq><priority>${path ? (path.includes("/") ? "0.7" : "0.8") : "1.0"}</priority></url>`;
+      return `  <url><loc>${loc}</loc></url>`;
     })
     .join("\n");
 
