@@ -253,3 +253,81 @@ Proposed order:
 - The page's own claims are not independent proof that monthly restarts prevent issues, that routers should be replaced after a fixed age, or that a restart solves most cases.
 - Its author is TP-Link Editorial Group and the page promotes TP-Link products. Consider the commercial context when evaluating product recommendations.
 - Complete competitor-gap claims require equivalent heading/content audits for at least four more organic results, ideally including Microsoft Support, Avast, and other top-ranked pages from the user's SERP capture.
+
+
+## 12. Competitor page audit: Avast article supplied by user
+
+Source: Avast Academy, “How to Fix The ‘Connected Without Internet’ Wi-Fi Issue,” written by Oliver Buxton, reviewed by Ellie Farrier, published 2025-09-05. User supplied the full extracted article. This is the second complete competitor reviewed.
+
+### Observed main structure
+
+- Check whether you have an internet or Wi-Fi issue
+  - Check your signal
+  - Test your Wi-Fi connection
+  - Check your existing hardware
+  - Check with your Internet Service Provider
+- How to fix “Wi-Fi connected but no internet access”
+  - Restart your modem and router
+  - Scan for malware
+  - Run your troubleshooter
+  - Relocate your router
+  - Remove unknown or unnecessary device connections
+- Still not working? Advanced troubleshooting tips
+  - Disable Fast Startup
+  - On a Mac (login items)
+  - Check time synchronization
+  - Update drivers
+  - Temporarily disable antivirus
+  - Resolve IP conflict issues
+  - Turn off IPv6 support
+  - Clear DNS cache
+  - Change your wireless frequency
+  - Use a different Wi-Fi channel
+  - Disable VPN
+  - Reset your router or modem to factory settings
+  - Upgrade your hardware and software
+- Why does my Wi-Fi stay connected but the internet drops?
+- Stay connected with Premium VPN (commercial promotion)
+
+The exact H2/H3 semantics were not independently verified from HTML; these are the headings as presented in the supplied extracted text.
+
+### Source-grounded findings
+
+- The article leads with distinguishing Wi-Fi vs internet access and testing another device. This means our one-device/all-devices split is NOT absent from this competitor.
+- It provides many Windows-specific advanced settings, macOS guidance, and links to Android/iPhone guides.
+- It covers VPN, antivirus, malware, DNS cache, IP conflicts, IPv6, channel/band interference, router placement, hardware, and ISP status.
+- It includes extensive Avast antivirus and VPN product promotions. Vendor-neutral guidance is an editorial differentiation, not proof of a ranking advantage.
+- It proposes temporarily disabling security protection and IPv6, as well as router factory reset. These are potentially disruptive and must not be copied as routine first steps; require official documentation, safeguards, and clear rollback conditions.
+- The article links poor signal/interference with connected-no-internet symptoms. Our content should distinguish intermittent/weak Wi-Fi from a stable local connection without internet, while acknowledging that symptoms can overlap.
+- It suggests router age and hardware upgrades; avoid adopting a fixed replacement age without independent evidence.
+
+### Updated cross-competitor comparison: TP-Link vs Avast
+
+| Attribute | TP-Link | Avast | Implication |
+|---|---|---|---|
+| Wi-Fi vs internet explanation | Yes | Yes | Baseline requirement, not unique |
+| One device vs all devices | Yes, later | Yes, near start | Decision-tree execution, not mere presence, is potential differentiation |
+| ISP/modem/router checks | Yes | Yes | Baseline |
+| Windows diagnostics | Basic-to-moderate | Extensive | Windows-specific page must add precise, verified routing rather than just more steps |
+| Android/iPhone | Short platform instructions | Links to platform guides | QDP for standalone device guides remains open |
+| DNS/IP | Yes | Yes | Baseline |
+| VPN/security interference | Limited | Extensive | Cannot claim content gap |
+| IPv6, wireless bands/channels | Limited | Yes | Do not add automatically; only where symptom-relevant |
+| Factory reset warning | Yes | Yes | Better safeguards/rollback may differentiate |
+| Commercial product promotion | Router | VPN/antivirus | Remain vendor-neutral |
+
+### Revised differentiation hypotheses
+
+1. Provide an explicit early decision tree with branches for one device, all devices, specific websites/apps, and intermittent disconnections, explaining what each observation implies.
+2. Use symptom-specific, risk-ordered instructions rather than an unfiltered catalog of every advanced fix.
+3. Separate “Wi-Fi keeps disconnecting” from “Wi-Fi connected but no internet”; show when to switch guides.
+4. Offer an escalation/rollback table: what the step changes, what can be lost, how to undo it, and when to contact ISP/device support.
+5. Keep troubleshooting advice vendor-neutral and avoid presenting router, VPN, or antivirus purchases as default repairs.
+
+These are hypotheses based on two competitor articles, not validated gaps across the top five. Do not claim uniqueness or ranking benefits until more competitor pages are inspected.
+
+### Remaining audit work
+
+- Audit at least three more relevant organic competitor pages from the user-provided SERP, preferably Microsoft Support plus two other substantive guides.
+- Verify OS-specific UI paths and technical claims against official Microsoft, Google, Apple, and router-manufacturer support pages.
+- Compare actual SERP overlap for Windows 11 and Android before approving separate child URLs.
