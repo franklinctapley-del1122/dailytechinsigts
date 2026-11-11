@@ -442,3 +442,53 @@ Windows 11 slow, Gmail not receiving emails, and app not opening metric calls fa
 The latest five-seed keyword-metrics retry returned `INSUFFICIENT_CREDITS` for every seed. No new volume/KD values were obtained for Windows 11 slow, Gmail not receiving mail, Android apps not opening, what are passkeys, or passkey vs password in this retry. Google SERP reads for passkeys comparison/definition and best password manager did succeed. Do not infer metrics from SERP positions or prior related terms. Further paid keyword research should wait until credits are replenished or an alternative dataset is authorized.
 
 **Current decision:** Passkeys vs passwords and best password manager are separate intent candidates; definition/how-it-works may be consolidated with the passkeys explainer after URL-level overlap review. This remains draft research, not final URL approval.
+
+
+## 14. Third-pass troubleshooting cluster validation — 2026-11-11
+
+**Scope:** Additional US Google desktop SERP samples for Windows 11 performance, Gmail delivery/sync, and Android app launch/crash queries. Six query reads were attempted. Three returned usable SERPs; three failed with `INSUFFICIENT_CREDITS`. No new keyword volume or KD metrics were returned in this pass.
+
+### A. Windows 11 running slow vs make Windows faster
+
+- “Windows 11 running slow” returned Microsoft Learn/community results, troubleshooting videos, and third-party fix guides. The sampled results address slow performance/lag and overlap with system maintenance steps.
+- “How to make Windows 11 faster” did not return a SERP because the provider reported insufficient credits.
+- Microsoft Support's current performance guidance identifies multiple possible causes: low storage, startup/background apps, outdated software, malware, and older hardware. It provides specific Windows settings and cautions that older hardware may not improve substantially.
+- **Decision:** Keep one Windows 11 slow-performance troubleshooting page candidate under Software > Windows & macOS. Treat “make Windows 11 faster,” “Windows 11 lagging,” and “Windows 11 running slow” as candidate variants/sections until a successful comparison SERP proves a different task. Keep laptop hardware/power faults in How-to & Fixes. Do not split startup speed into a new URL without separate SERP evidence.
+
+Official source: Microsoft Support, “Tips to improve PC performance in Windows” — https://support.microsoft.com/en-us/windows/experience/performance-optimization/tips-to-improve-pc-performance-in-windows
+
+### B. Gmail not receiving emails vs Gmail not syncing
+
+- “Gmail not receiving emails” returned a mix of Gmail consumer troubleshooting, Google support community, Reddit, and a Google Workspace Admin result for receiving mail/MX records.
+- “Gmail not syncing” did not return a SERP due to insufficient credits.
+- Google's Gmail sync help states that a full Google Account storage quota can prevent sending and receiving messages; Gmail app sync problems can also involve device storage and sync settings. Google Workspace's admin troubleshooting result focuses on MX records, domain/account configuration, and Email Log Search, indicating a distinct administrator audience.
+- **Decision:** Retain one consumer Gmail “not receiving emails” candidate under Software > Browsers, Email & Cloud Tools. Include sync as a diagnostic branch only if it fits the same user task. Keep Workspace Admin/MX delivery troubleshooting out of the consumer page; create a separate admin page only if its demand and audience are later validated.
+
+Official source: Gmail Help, “Fix sync errors with the Gmail app” — https://support.google.com/mail/answer/6383854
+Official admin source: Google Workspace Admin Help, “Troubleshoot problems receiving emails in Gmail” — https://knowledge.workspace.google.com/admin/support/troubleshooting/troubleshoot-problems-receiving-emails-in-gmail
+
+### C. Android app won't open vs app keeps crashing
+
+- “Android app won't open” and “Android app keeps crashing” SERP requests both failed with insufficient credits; no query-level overlap conclusion is possible from this pass.
+- Google Play Help has one official troubleshooting page explicitly covering installed apps that crash, won't open, won't respond, or otherwise malfunction. Its steps include restart/update, force stop, cache/data, date/time sync, uninstall and developer support. It warns that settings vary by device and that clearing app data or uninstalling can erase local app data.
+- **Decision:** Keep one Android app-not-opening/crashing troubleshooting page candidate under How-to & Fixes > Apps, Accounts & Everyday Tech Fixes. Treat crash/open/won't-respond symptoms as one combined intent provisionally because Google's official support handles them in one troubleshooting flow. Revisit only if successful SERPs show materially different result sets or solution paths. Add strong data-loss warnings before cache/data clearing or uninstalling.
+
+Official source: Google Play Help, “Fix an installed Android app that isn't working” — https://support.google.com/googleplay/answer/2668665?hl=en
+
+### D. Updated candidate decisions
+
+| Candidate cluster | Hub | Provisional role | Decision after this pass |
+|---|---|---|---|
+| Windows 11 running slow / lagging / make faster | Software > Windows & macOS | Supporting candidate | One page candidate; keyword metrics and modifier SERPs remain incomplete |
+| Gmail not receiving emails | Software > Browsers, Email & Cloud Tools | Supporting candidate | Consumer guide; sync branch provisional; separate Workspace admin audience |
+| Android app won't open / keeps crashing | How-to & Fixes > Apps & Accounts | Supporting candidate | One symptom guide provisionally; query SERPs incomplete |
+
+### E. Research limits and next gate
+
+- OpenSEO keyword research credits are currently insufficient; no new volumes, KD, CPC, or intent metrics were obtained.
+- Of six SERP queries attempted in this pass, three succeeded (Windows slow, Gmail not receiving emails) and three failed (Windows faster, Gmail not syncing, Android app won't open/crashing).
+- Official documentation supports real troubleshooting workflows and cautions, but does not establish search demand or prove SERP overlap.
+- Do not infer that two queries share a SERP just because one official support page groups the symptoms.
+- No first-party GSC/GA4 data was used; no article drafting, publishing, sitemap additions, or indexing requests occurred.
+
+**Current decision:** These three topics remain candidates, not approved URLs. The next meaningful Phase 1 task is to complete the candidate URL inventory across all 15 sub-hubs, mark evidence gaps explicitly, and draft the SCN parent/lateral/child linking graph without publishing.
