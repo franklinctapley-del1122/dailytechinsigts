@@ -256,3 +256,84 @@ A third-party AI-tool keyword analysis published in October 2026 reports very co
 - No keyword-level cannibalization audit against existing Daily Tech Insights articles; there are currently no published article URLs in the post sitemap.
 
 **Next gate:** Connect a keyword research source (OpenSEO or an equivalent trusted dataset), then capture fixed-location US SERPs for the P1 clusters and record competing URLs. Do not approve article URLs, write articles, publish, or request indexing until this evidence and the final SCN are reviewed.
+
+## 11. OpenSEO US keyword metrics and SERP competitor validation — 2026-11-11
+
+**Market:** United States (DataForSEO location code 2840), English, Google desktop SERPs.
+**Method:** Five seed keyword research calls (up to 150 related terms each), five sampled Google SERPs (depth 10), and cross-keyword competitor aggregation. Metrics are third-party estimates, not Search Console impressions or guaranteed traffic. SERPs are merged repeated reads and can vary.
+
+### A. Measured head-term snapshot
+
+| Candidate | US monthly search volume estimate | Keyword difficulty | Intent | Initial decision |
+|---|---:|---:|---|---|
+| wifi connected but no internet | 4,400 for main phrase/close variants | 1–2 | Informational | Prioritize one cross-device troubleshooting page. Close variants share volume; do not sum. |
+| iPhone battery draining fast | 8,100 | 7 | Informational | Prioritize one iPhone battery-drain page; consolidate synonym variants. |
+| laptop not charging | 2,900 | 0 | Informational | Prioritize one diagnostic guide; OEM child pages only if separate intent is proven. |
+| ChatGPT not working | 6,600 | 29 | Informational | Prioritize a narrow troubleshooting guide with official status references. |
+| what to do if clicked on a phishing link | 590 | 0–3 | Informational | Prioritize as a distinct incident-response guide. |
+
+### B. Long-tail opportunities
+
+| Cluster | Keyword | US volume | KD | Initial treatment |
+|---|---|---:|---:|---|
+| Wi-Fi | wifi shows connected but no internet | 4,400 | 0 | Same close-variant cluster; merge |
+| Wi-Fi | connected but no internet access wifi | 4,400 | 2 | Same close-variant cluster; merge |
+| Wi-Fi | wifi keeps disconnecting | 2,400 | 6 | Separate symptom; SERP check before URL |
+| iPhone battery | iphone battery draining fast after update | 720 | 14 | Section first; separate URL only if SERP differs |
+| iPhone battery | my iphone battery draining fast | 1,600 | 9 | Same intent; merge |
+| Laptop | laptop is plugged in not charging | 1,300 | 0 | Supporting section/variant |
+| Laptop | acer laptop battery is not charging | 1,300 | 0 | OEM modifier; official-source section first |
+| ChatGPT | chatgpt not working today | 720 | 29 | Time-sensitive outage wording; distinguish status from device-side fixes |
+| ChatGPT | chatgpt voice not working | 480 | 2 | Feature-specific candidate; SERP validation needed |
+| ChatGPT | is chatgpt down | 110,000 | 39 | Distinct live-status intent, highly volatile |
+| Phishing | what to do if you click on a phishing link | 590 | 1 | Same post-click incident-response cluster |
+| Phishing | check if link is safe | 1,900 | 35 | Distinct pre-click verification intent |
+| Phishing | virustotal url check | 3,600 | 10 | Branded tool intent; requires differentiated useful coverage |
+
+Keyword tools returned irrelevant noise too: Wi-Fi queries included unrelated terms; iPhone battery included case/color terms; laptop included 'won't turn on'; phishing included DDoS terms. Filter by entity, intent, and SERP before scoring. Shared-volume variants must not be added together.
+
+### C. SERP composition observations
+
+**Wi-Fi connected but no internet:** Microsoft and TP-Link support resources appeared with forums/community pages. SERP features included AI Overview, People Also Ask, video and discussions. Related queries have MacBook, iPhone, Android, Windows, laptop and TV modifiers. Decision: one cross-device network-level diagnostic page in How-to & Fixes; platform sections only where steps differ. Validate 'can't connect to Wi-Fi' and 'Wi-Fi keeps disconnecting' separately.
+
+**iPhone battery draining fast:** Estimated volume about 8.1k/month, KD 7. Main phrase and 'phone battery draining fast iPhone' have matching metrics, supporting consolidation. Decision: one Phones > iPhone page; update-related causes as a section unless its SERP proves separate intent. Do not mix Android instructions.
+
+**Laptop not charging:** Generic head-term volume about 2.9k; 'plugged in, not charging' is a relevant variant. Sample SERP included HP and Dell manufacturer resources and community results. Decision: one generic diagnostic guide with safe checks and escalation; OEM pages only if intent and instructions are materially distinct.
+
+**ChatGPT not working:** Observed domains included OpenAI Help Center, OpenAI Status, community discussions, troubleshooting publishers and outage-status services. AI Overview, PAA, video and discussion features appeared. Head term volume about 6.6k, KD 29; 'is ChatGPT down' has separate estimated volume around 110k and KD 39. Decision: distinguish service status from user-side troubleshooting (browser/network/account/session). Link to official status; do not imply live status without a live source. 'ChatGPT voice not working' (480, KD 2) is a feature-specific candidate requiring its own SERP validation.
+
+**Clicked a phishing link:** Sample SERP was incident-response focused with security vendors, community posts and security/consumer publishers; PAA, AI Overview, discussions and video features appeared. Post-click variants share around 590 estimated monthly searches and low KD (0–3). 'Check if link is safe' and VirusTotal have separate pre-click/tool intent. Decision: one post-click response guide; pre-click URL-safety checks are a separate candidate if they can be differentiated.
+
+### D. Cross-keyword competitor landscape
+
+Across the five sampled queries: Reddit appeared across four of five; Microsoft Learn appeared for Wi-Fi and laptop troubleshooting; HP and Dell for laptop charging; TP-Link for Wi-Fi; OpenAI Help Center and status.openai.com for ChatGPT; Norton and other security vendors for phishing. NordVPN, Quora, YouTube and Facebook also appeared across query sets/features.
+
+This is a sample, not a market-share ranking. Competitor aggregation is limited to the five selected keywords and sampled SERP reads.
+
+### E. Provisional page decisions and hub ownership
+
+| Proposed topic | Hub | Role | Decision |
+|---|---|---|---|
+| Wi-Fi connected but no internet: cross-device diagnosis | /how-to/internet-wifi/ | Core candidate | One page with device/router/ISP diagnosis and platform sections |
+| Wi-Fi keeps disconnecting | /how-to/internet-wifi/ | Supporting candidate | Validate separate SERP; section initially |
+| iPhone battery draining fast | /phones/iphone/ | Supporting/Core candidate | One URL; consolidate synonyms |
+| Android battery draining fast | /phones/android/ | Supporting candidate | Separate platform research required |
+| Laptop not charging | /how-to/device-fixes/ | Core candidate | One general diagnostic page; source OEM steps |
+| Laptop won't turn on | /how-to/device-fixes/ | Supporting candidate | Separate symptom; validate its own query family |
+| ChatGPT not working: user-side troubleshooting | /ai/chatgpt/ | Supporting candidate | Keep distinct from live outage intent |
+| Is ChatGPT down? | /ai/chatgpt/ | Transitional candidate | High volume but volatile; needs official live source |
+| ChatGPT voice not working | /ai/chatgpt/ | Supporting candidate | Validate feature-specific SERP first |
+| What to do after clicking a phishing link | /cybersecurity/scams-privacy/ | Core candidate | Distinct incident-response intent |
+| Check if a link is safe | /cybersecurity/scams-privacy/ | Supporting candidate | Distinct pre-click intent; review tools carefully |
+
+### F. Evidence limitations and next gate
+
+- Metrics are US/English OpenSEO/DataForSEO estimates, five seeds, maximum 150 related rows per seed.
+- Google SERPs sampled at US location code 2840, desktop, depth 10; results may vary between reads.
+- No clickstream refinement was enabled. Close variants may share reported volumes.
+- Merged SERP `rank` is not a stable single-page Google position; bestPosition is the best observed position across reads.
+- No Search Console or GA4 data was used.
+- No article URLs currently exist in the post sitemap, so an existing article cannibalization audit is not possible yet.
+- No keyword rank tracker, AI visibility tracker, recurring checks, article publishing, sitemap article additions, or indexing requests were configured.
+
+**Next gate:** Research Android battery, Windows slow/startup/update, Gmail issues, account security/MFA, and app-not-opening/verification-code. Compare similar queries' SERPs before approving the complete Core/Supporting/Transitional inventory and SCN graph. Do not draft or publish articles or request indexing yet.
