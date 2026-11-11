@@ -337,3 +337,71 @@ This is a sample, not a market-share ranking. Competitor aggregation is limited 
 - No keyword rank tracker, AI visibility tracker, recurring checks, article publishing, sitemap article additions, or indexing requests were configured.
 
 **Next gate:** Research Android battery, Windows slow/startup/update, Gmail issues, account security/MFA, and app-not-opening/verification-code. Compare similar queries' SERPs before approving the complete Core/Supporting/Transitional inventory and SCN graph. Do not draft or publish articles or request indexing yet.
+## 12. Second-pass US keyword and SERP review — 2026-11-11
+
+**Scope:** Android battery, Windows 11 performance, Gmail delivery, passkeys, Android app launch troubleshooting. Five seed keyword requests were attempted; Android battery and passkeys returned keyword metrics, while Windows, Gmail, and app-not-opening metric calls returned errors. Google desktop SERPs returned usable result sets for all five themes. Competitor aggregation across these five terms returned no competitor rows; treat that as an unavailable result, not evidence that no competitors exist.
+
+### A. Metrics that returned successfully
+
+| Keyword | US monthly volume estimate | KD | Intent | Interpretation |
+|---|---:|---:|---|---|
+| android battery draining fast | 720 | 15 | Informational | Real but materially smaller estimated demand than iPhone battery-drain query; still relevant platform coverage. |
+| why is my battery draining so fast android | 320 | 14 | Informational | Supporting variant; likely same Android troubleshooting page. |
+| passkeys vs passwords | 6,600 | 5 | Informational | Strong opportunity for an explanatory comparison guide under Cybersecurity. |
+| best password manager | 14,800 | 46 | Commercial | Separate product-selection intent; do not combine with passkeys explainer. |
+
+Windows 11 slow, Gmail not receiving emails, and app not opening metric calls failed in the keyword provider response; no search-volume or KD values are assigned to those topics.
+
+### B. SERP intent observations and page decisions
+
+**Android battery draining fast**
+- SERP included Google Pixel Help, Android.com, Avast, Asurion and iFixit, as well as videos and community content.
+- Google Pixel support result is specifically titled around fixing battery drain and offers device diagnostics; Android platform support and vendor/handset instructions are visible.
+- Decision: one Android battery-drain guide in Phones > Android. Add a Samsung/Pixel-specific branch or section only when the steps differ and official documentation is available. Do not assume this has the same demand as the iPhone battery query.
+
+**Windows 11 running slow**
+- Microsoft Learn/Tech Community, community threads, videos and troubleshooting publishers appeared.
+- Sampled result types suggest hands-on diagnostic intent: startup/background apps, system resources, updates, storage and performance settings.
+- Decision: one Windows 11 slow-performance troubleshooting page under Software > Windows & macOS. Keep laptop hardware issues (not charging / won't power on) in How-to & Fixes. Do not write a generic Windows 11 mega-guide that mixes setup and symptom diagnosis.
+
+**Gmail not receiving emails**
+- SERP included Google Workspace Admin Help, Google support community, Reddit and troubleshooting publishers.
+- Result snippets suggest multiple causes: storage quota, spam/trash, filters, forwarding, sync, account/domain configuration, and sender-side delivery. Some results are Gmail consumer troubleshooting, while Workspace Admin guidance addresses domain-level mail delivery/MX records.
+- Decision: one consumer Gmail troubleshooting guide; a separate Google Workspace admin/MX guide only if validated as a distinct audience and intent. Do not put Workspace administration steps into consumer instructions without clear separation.
+
+**Passkeys vs passwords**
+- SERP included Microsoft Learn, Google Safety, Dashlane, GlobalSign and security publishers, alongside discussion/video features.
+- Query is a comparison/explainer intent, while “best password manager” is commercial selection intent and should be a separate page.
+- Decision: Core candidate under Cybersecurity > Account Security explaining passkey behavior, device/platform sync and recovery limitations with official sources. Cover password managers in a separate buying/selection cluster only after comparison criteria and current product evidence are established.
+
+**App not opening on Android**
+- SERP included Google's official Android app troubleshooting page, Sony support, Asurion, community discussions and video results.
+- Snippets show practical troubleshooting steps such as restart/update, force stop, cache/data and app/system checks. Device and OS-version differences must be explicit.
+- Decision: one Android app-not-opening diagnostic guide under How-to & Fixes > Apps, Accounts & Everyday Tech Fixes. If app-specific (e.g. one named app) searches dominate, create separate pages only with evidence and genuinely distinct fixes.
+
+### C. Cross-topic routing and cannibalization controls
+
+| Query family | Primary hub | Keep separate from |
+|---|---|---|
+| Android battery drain | Phones > Android | iPhone battery guide; general battery science |
+| Windows 11 slow | Software > Windows & macOS | Laptop not charging / hardware power fault |
+| Gmail not receiving emails | Software > Browsers, Email & Cloud Tools | Phishing/compromised account response; Workspace admin MX troubleshooting |
+| Passkeys vs passwords | Cybersecurity > Account Security | Best password manager buying guide |
+| Android app not opening | How-to & Fixes > Apps & Accounts | Named app-specific errors unless query intent is distinct |
+
+### D. Updated early priority signals
+
+- Passkeys vs passwords has the strongest returned demand/difficulty combination in this batch: 6.6k volume estimate, KD 5. Worth advancing to an evidence-rich Core brief after validating PAA and exact SERP overlap with “what is a passkey” and “how do passkeys work.”
+- Android battery drain has lower estimated demand (720) and KD 15 compared with iPhone battery drain (8.1k, KD 7); keep it in cluster coverage, but sequence after the stronger iPhone query unless strategic completeness says otherwise.
+- Windows 11 and Gmail topics have recognizable, task-led SERPs, but lack returned keyword metrics in this run. Don't assign priority using guessed volumes.
+- Android app troubleshooting is a useful long-tail/supporting topic, but current provider data has no reliable volume estimate. Validate more synonyms and Android-version modifiers before deciding a stand-alone URL.
+
+### E. Source/metric limits
+
+- Google SERP sample: US (2840), English, desktop, depth 10; returned merged reads rather than one stable result page.
+- Android battery and passkeys metric data returned from five-seed keyword research. Other three keyword metric calls failed.
+- The competitor aggregation tool returned an empty competitor array for this five-query set; individual SERP items were still returned and are recorded qualitatively. Competitor aggregation therefore remains incomplete.
+- No GSC/GA4 data is connected to the OpenSEO project; no first-party metrics were available.
+- 22 candidate terms across the two research batches were saved in OpenSEO for future reference. No rank tracking, scheduled tracking, or paid recurring monitoring was configured.
+
+**Next gate:** Retry failed seed metrics with simpler variants, then inspect more query variants for Gmail, Windows, and Android app fixes. Confirm whether passkeys explainer and password-manager selection have different SERPs. Once the remaining hub families have evidence, assemble final topic inventory and SCN graph. No articles, sitemap content, or indexing actions until approval.
