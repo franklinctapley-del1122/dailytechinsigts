@@ -210,3 +210,8 @@ Before publication:
 - Human editorial QA and user approval required.
 
 **Do not publish, deploy, add to sitemap, request indexing, or use IndexNow until the user approves the finished content and publication step.**
+
+
+## 10. First full article draft
+
+A first complete editorial draft is saved at `docs/content-drafts/wifi-connected-no-internet-draft.md` on branch `content/semantic-revision-internet-wifi`. It follows this brief and remains unpublished pending fact-check, editorial QA, and user approval.
