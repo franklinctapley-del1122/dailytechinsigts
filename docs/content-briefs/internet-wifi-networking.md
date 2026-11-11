@@ -331,3 +331,67 @@ These are hypotheses based on two competitor articles, not validated gaps across
 - Audit at least three more relevant organic competitor pages from the user-provided SERP, preferably Microsoft Support plus two other substantive guides.
 - Verify OS-specific UI paths and technical claims against official Microsoft, Google, Apple, and router-manufacturer support pages.
 - Compare actual SERP overlap for Windows 11 and Android before approving separate child URLs.
+
+
+## 13. Competitor/source audit: Microsoft Support official Windows Wi-Fi guide
+
+Source reviewed: Microsoft Support, “Fix Wi-Fi connection issues in Windows,” official support page, applies to Windows 10 and Windows 11. Web review completed 2026-11-11. This is an official platform support source, not a like-for-like independent publisher competitor. Keep it in the source comparison, but do not count it as proof of publisher competitor gaps.
+
+### Observed content structure and coverage
+
+- Windows 11: run the Network and Internet troubleshooter in Get Help.
+- Understand Wi-Fi status icons, including the distinction between connected and no internet.
+- General troubleshooting:
+  - Check network connection status.
+  - Check Airplane Mode.
+  - Forget and reconnect to the Wi-Fi network.
+  - Restart modem and wireless router.
+  - Try another frequency band / adjust channel (page coverage varies by localized/current rendering).
+  - Connect to the same network on a different device.
+  - Run network commands.
+  - Uninstall network adapter driver and restart, with a backup driver available.
+  - Ping the default gateway to test the PC-to-router connection.
+  - Disable Wi-Fi adapter power saving.
+  - Check Windows updates and restart.
+  - Use Network reset as a last step.
+- Additional problem-specific sections:
+  - Slow Wi-Fi.
+  - Missing Wi-Fi option.
+  - Frequent Wi-Fi disconnections.
+  - Connected to Wi-Fi but no internet / limited connectivity.
+  - Wi-Fi authentication problems.
+  - Adapter detected but no networks found.
+  - No network adapters detected or enabled.
+
+### Key official diagnostic details
+
+1. Microsoft recommends testing the same Wi-Fi network on another device to help distinguish a device-specific problem from a broader network issue.
+2. A gateway ping can test whether the Windows PC can communicate with its Wi-Fi router. If the gateway responds but internet access is unavailable, Microsoft directs readers to consider the modem or ISP; if it does not respond, it suggests further router/Wi-Fi isolation.
+3. Microsoft's command sequence includes Winsock reset, TCP/IP reset, IP release/renew, and DNS cache flush. These are Windows-specific commands and should not be presented as universal fixes for phones or Macs.
+4. Microsoft says network reset should be the last step. It removes and reinstalls network adapters and resets their settings; VPN clients and virtual switches may need to be reinstalled or configured again.
+5. Microsoft advises having a backup network driver before uninstalling the adapter driver, especially when the PC has no alternative internet connection.
+6. Adapter power-saving settings and frequent-disconnect diagnostics are relevant to the separate intermittent-disconnection intent, not automatically to every “connected but no internet” case.
+
+### Comparison update: TP-Link, Avast, Microsoft
+
+- The core split between one affected device and multiple devices is already present across the sources reviewed. It is a baseline diagnostic principle, not a unique gap.
+- DNS/IP, router restart, ISP checks, and adapter/driver steps are well-covered topics.
+- Microsoft provides stronger Windows-specific diagnostic depth than the two general publisher/manufacturer articles, especially gateway ping, command-line diagnostics, driver backup, and the consequences of network reset.
+- Avast adds security/VPN, clock, IPv6, band/channel and malware topics; TP-Link emphasizes router/modem/cables and a commercial router upgrade path.
+- Microsoft is an authoritative technical source for Windows instructions, but its Windows scope means it does not replace Android, iOS, or router/ISP-specific official documentation.
+
+### Implications for Daily Tech Insights
+
+1. Do not reproduce Microsoft's entire troubleshooting list. Build a consumer-friendly diagnostic route and link to Microsoft for advanced Windows-only steps where appropriate.
+2. Explain what a gateway ping result tells the reader, but only include the command in a Windows-specific section with clear instructions and interpretation.
+3. Add a warning before network reset: network adapters/settings are reset and VPN or virtual networking software may require setup again.
+4. If recommending driver uninstall/reinstall, tell readers to obtain the correct backup driver first and ensure they have another way to get online.
+5. Keep power-management changes under the Wi-Fi disconnecting guide unless a specific connected/no-internet symptom supports their inclusion.
+6. Maintain a clear boundary between “the PC can reach the router” and “the router can reach the internet.” Avoid treating a successful gateway ping as proof that ISP connectivity is healthy.
+
+### Evidence limitations and remaining work
+
+- Microsoft Support is a primary source for Windows behavior and instructions, not a commercial competitor article.
+- The page's localized rendering and exact headings may change. Verify Windows 11 UI labels at publication time.
+- Three sources have now been reviewed (TP-Link, Avast, Microsoft), but only two are publisher/manufacturer editorial articles. At least two more relevant organic publisher pages should be audited before making top-five competitor-gap claims.
+- Verify Android steps against Google Help, Apple steps against Apple Support, and router-specific behavior against the actual manufacturer's documentation.
