@@ -215,3 +215,55 @@ Before publication:
 ## 10. First full article draft
 
 A first complete editorial draft is saved at `docs/content-drafts/wifi-connected-no-internet-draft.md` on branch `content/semantic-revision-internet-wifi`. It follows this brief and remains unpublished pending fact-check, editorial QA, and user approval.
+
+
+## 11. Four-query SERP validation (user-supplied Google USA results, 2026-11-11)
+
+### Queries reviewed
+1. `wifi connected but no internet`
+2. `wifi connected but no internet windows 11`
+3. `wifi connected but no internet android`
+4. `wifi connected but no internet iphone`
+
+This is a user-supplied SERP snapshot, not a live independently reproduced rank check. Results are a sample and may vary by time, location, device, and query.
+
+### Observed result patterns
+
+| Query | Visible result examples | Dominant task indicated by the supplied SERP |
+|---|---|---|
+| Broad | TP-Link, Avast, MIS Solutions, Microsoft Support/Q&A, Reddit | Diagnose one device vs all devices; router, ISP, and device troubleshooting |
+| Windows 11 | Driver Easy, Microsoft Support/Q&A, TechPP videos, Sandeep Singh videos, Reddit | Windows-specific settings, troubleshooter, IP/DNS commands, VPN/proxy, drivers, network reset |
+| Android | Lagenio, Google Android Help, TP-Link, TechMedicHub, Android videos, Reddit/Stack Exchange | Android Wi-Fi/mobile data, toggle/forget/rejoin, date/time and VPN checks, network reset |
+| iPhone | Apple Community, TP-Link, pingkit.app, iPhone troubleshooting videos, Reddit | iOS Wi-Fi controls, forget/rejoin, VPN/profile checks, network reset |
+
+### PAA and related-query observations
+
+- Broad query PAA included full signal/no internet, browsing despite Wi-Fi connection, internet vs Wi-Fi distinction.
+- Windows 11 PAA included PC connected/no internet, Wi-Fi connected/no access, and connected status without internet.
+- Android PAA included phone-specific no-internet symptoms and the case where other devices on the same Wi-Fi work.
+- iPhone PAA included iPhone no-internet despite connection, phone/data symptoms, and 5G without internet.
+- Related searches repeatedly surfaced the one-device vs other-devices distinction, plus device/OS modifiers and after-reset/after-update variants.
+
+### Editorial architecture recommendation
+
+**Retain one broad Core guide** at the proposed `/how-to/wifi-connected-no-internet/` URL. It should own the shared diagnostic decision tree, all-devices/router/ISP troubleshooting, and the distinction between local Wi-Fi connectivity and internet access.
+
+**Plan three separate platform-specific supporting pages as candidates**, not yet approved for publication:
+- Windows 11: distinct settings, diagnostics, commands, adapter/driver handling, and reset consequences.
+- Android: Android-specific settings and Google-supported checks, with manufacturer/version differences.
+- iPhone: Apple-specific Wi-Fi controls, VPN/profile considerations, and exact reset consequences.
+
+Reason: the supplied device-modifier SERPs show platform-specific result sets, video results, and distinct platform instructions rather than simply repeating the broad query results. This supports testing separate page briefs, but does not by itself prove search volume, traffic, ranking opportunity, or that each page will outperform a section.
+
+### Publication and cannibalization safeguards
+
+- Keep the broad guide focused on shared diagnosis and route users to a platform page only for the device-specific procedure.
+- Each supporting page must provide substantial platform-specific value; do not publish near-duplicate pages created by swapping “Windows”, “Android”, and “iPhone”.
+- Create separate briefs and inspect the full top organic results and official platform documentation before drafting each page.
+- Verify search demand and query overlap using reliable keyword data before approving the three pages.
+- Until the child pages are approved and published, do not link to their proposed URLs or add them to the sitemap.
+- No route creation, publication, deployment, sitemap inclusion, indexing request, or IndexNow action is authorized by this SERP review.
+
+### Limitations
+
+The supplied snippets do not provide reliable keyword volumes, complete competitor page content, stable rank positions, or a full top-ten organic result set for every query. They are sufficient to identify distinct platform-specific intent signals, but not to quantify opportunity or declare definitive content gaps.
