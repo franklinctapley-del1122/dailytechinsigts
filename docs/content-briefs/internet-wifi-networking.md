@@ -395,3 +395,52 @@ Source reviewed: Microsoft Support, “Fix Wi-Fi connection issues in Windows,�
 - The page's localized rendering and exact headings may change. Verify Windows 11 UI labels at publication time.
 - Three sources have now been reviewed (TP-Link, Avast, Microsoft), but only two are publisher/manufacturer editorial articles. At least two more relevant organic publisher pages should be audited before making top-five competitor-gap claims.
 - Verify Android steps against Google Help, Apple steps against Apple Support, and router-specific behavior against the actual manufacturer's documentation.
+
+
+## 14. Detailed verification from the Microsoft Support page supplied by the user
+
+The user supplied the extracted Microsoft Support page “Fix Wi-Fi connection issues in Windows.” This confirms and sharpens the earlier Microsoft source audit. It is an official Windows support source, not a fourth independent publisher competitor.
+
+### Page structure observed in the supplied source
+
+- Run the Network troubleshooter (Windows 11 Get Help app)
+- Understand Wi-Fi icons
+- General troubleshooting:
+  1. Check network connection status
+  2. Check Airplane Mode
+  3. Forget and reconnect to the Wi-Fi network
+  4. Restart modem and wireless router
+  5. Adjust Wi-Fi channel and frequency
+  6. Try the same network on a different device
+  7. Run network commands
+  8. Uninstall the network adapter driver and restart
+  9. Use ping to test the Wi-Fi router connection
+  10. Disable Wi-Fi adapter power saving
+  11. Check Windows updates
+  12. Restart the PC
+  13. Use network reset
+- Most common Wi-Fi problems:
+  - Connected to internet but very slow speed
+  - Wi-Fi option is missing
+  - Wi-Fi connection is dropping frequently
+  - Connected to Wi-Fi but no internet / limited connectivity
+  - Wi-Fi authentication problem
+  - Adapter recognized but no Wi-Fi networks found
+  - No network adapters detected or enabled
+
+### Additional details confirmed by the supplied page
+
+- Microsoft explains that its Windows “No Internet” indicator can be triggered when Windows sends a small HTTP request to an internet server and receives no information back. This is Windows status-detection behavior; do not generalize it as the universal definition of all devices' connectivity indicators.
+- For limited connectivity, Microsoft recommends checking proxy settings and whether the device has an address in the 169.254.x.x range, which can indicate Windows did not obtain an address from the router when DHCP is expected.
+- Microsoft describes checking the DNS server address and pinging it, with a possible DNS-server change if the current DNS server cannot be reached. Do not recommend changing DNS before verifying the underlying network path.
+- The gateway ping example is used to test PC-to-router reachability. A successful reply confirms communication with the local gateway, not successful internet access.
+- If the gateway ping fails, Microsoft suggests an Ethernet test to distinguish a Wi-Fi-router path issue, where feasible.
+- Microsoft advises having a backup network adapter driver before uninstalling the existing one. If the PC cannot access the internet, download the driver on another PC and transfer it by USB.
+- Network reset is explicitly the last step. It removes installed network adapters and their settings; VPN clients and Hyper-V virtual switches may need reinstalling/reconfiguration, and Windows may change known network profiles to Public.
+- The page separately covers frequent disconnects and adapter power-saving settings. Those details should primarily support the separate “Wi-Fi keeps disconnecting” guide rather than inflate the connected/no-internet article.
+
+### Editorial decision
+
+Use Microsoft as the primary authority for Windows-specific instructions. The core consumer guide should explain the diagnostic logic in plain language and link to Microsoft for advanced Windows steps where that is more responsible than paraphrasing a long command sequence. If we reproduce any command, include its exact purpose, prerequisites, expected result, and potential side effects.
+
+No additional publisher competitor count is added by this supplied Microsoft page; the source audit count remains two commercial editorial pages plus one official platform support source.
